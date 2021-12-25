@@ -58,7 +58,9 @@ function nextCell(iter, color) {
         let pos = obj.value;
         // console.log(pos);
         const cell = document.querySelector(`#cell-${pos[0]}-${pos[1]}`);
+        const p = cell.querySelector("p");
         cell.style.setProperty("background-color", color);
+        p.style.setProperty("color", colorCode[0]);
         return obj.done;
     }
 }
@@ -160,7 +162,7 @@ const speedButtons = document.querySelectorAll("#speedBtns button[type=button]")
 const mazeGUI = document.querySelector(".labyrinth");
 const dfsButton = document.querySelector("#dfs");
 const bfsButton = document.querySelector("#bfs");
-const colorCode = ["grey", "black", "#007bff", "#28a745", "#dc3545"];
+const colorCode = ["white", "black", "#007bff", "#28a745", "#dc3545"];
 const mazeState = {
     "displayed": false, "solved": false, "enumerated": false,
     "speed": speed
