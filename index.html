@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Anton&family=Bebas+Neue&family=Francois+One&family=Hind+Siliguri:wght@500&family=Inconsolata:wght@500&family=Lexend+Deca:wght@500&family=Orbitron&family=Signika+Negative:wght@500&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Anton&family=Bebas+Neue&family=Francois+One&family=Hind+Siliguri:wght@500&family=Inconsolata:wght@500&family=Lexend+Deca:wght@500&family=Orbitron&family=Saira:wght@300&family=Signika+Negative:wght@500&display=swap"
+        rel="stylesheet">
+
+
+    <!-- bootstrap css cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- bootstrap js cdn -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="message.css">
+    <script src="maze.js"></script>
+    <script src="queue.js"></script>
+    <script src="depth-first-search.js"></script>
+    <script src="breadth-first-search.js"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <div class="notification">
+
+        <div class="notification__message message--success">
+            <h1>Info</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+            <!-- x icon through a path element -->
+            <button aria-labelledby="button-dismiss">
+                <span id="button-dismiss" hidden>Dismiss</span>
+                <svg viewBox="0 0 100 100" width="10" height="10">
+                    <!-- group to style the path -->
+                    <g stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"
+                        fill="none">
+                        <!-- group to center and rotate the + sign to show an x sign instead -->
+                        <g transform="translate(50 50) rotate(45)">
+                            <!-- path describing two perpendicular lines -->
+                            <path d="M 0 -30 v 60 z M -30 0 h 60">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+        </div>
+
+        <script src="message.js"></script>
+    </div>
+
+
+
+    <div class="app-container">
+
+        <div class="dashboard">
+
+            <div class="btnDash">
+                <div class="sizeDash">
+                    <label>Size</label>
+                    <div class="btn-group mr-2" id="sizeBtns" role="group" aria-label="First group">
+                        <button type="button" value=10 class="btn">10</button>
+                        <button type="button" value=15 class="btn">15</button>
+                        <button type="button" value=20 class="btn">20</button>
+                        <button type="button" value=25 class="btn">25</button>
+                    </div>
+                </div>
+    
+                <div class="speedDash">
+                    <label>Speed</label>
+                    <div class="btn-group mr-2" id="speedBtns" role="group" aria-label="First group">
+                        <button type="button" value=125 class="btn btn-danger">1x</button>
+                        <button type="button" value=75 class="btn btn-danger">2x</button>
+                        <button type="button" value=25 class="btn btn-danger">5x</button>
+                        <button type="button" value=5 class="btn btn-danger">10x</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="opt-obstacles">
+                <div class="rangeDashboard">
+                    <label id="rangeTitle" for="walls" class="form-label">Obstacles:</label>
+                    <label id="rangeValue">50</label>
+                </div>
+                <input id="walls" type="range" class="form-range" min="0" max="100">
+            </div>
+
+            <div class="form-check">
+                <input id="flexCheckDefault" class="form-check-input" type="checkbox" value="">
+                <label id="enum-check-box" class="form-check-label" for="flexCheckDefault">
+                    Enumerate
+                </label>
+            </div>
+
+            <div class="search-algorithms">
+                <button class="btn btn-primary" id="dfs">Depth-Frist-Search</button>
+                <button class="btn btn-success" id="bfs">Breadth-First-Search</button>
+            </div>
+
+        </div>
+        <div class="labyrinth">
+
+        </div>
+    </div>
+
+    <script src="page.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+
+body {
+    /* background-color: gray; */
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Saira', sans-serif;
+}
+
+.btnDash {
+    padding: 10px 0px;
+}
+
+.sizeDash, .speedDash {
+    display: inline-block;
+    text-align: left;
+}
+
+.sizeDash label, .speedDash label {
+    display: block;
+    text-align: left;
+}
+
+.app-container {
+    min-width: 500px;
+    max-width: 800px;
+    /* background-color: rgb(178, 209, 245); */
+    margin: auto;
+    text-align: center;
+    padding: 0px;
+}
+
+.dashboard {
+    margin: auto;
+    width: 50%;
+}
+
+.opt-size{
+    background-color: rgb(246, 214, 255);
+}
+
+button {
+    box-shadow: none !important;
+}
+
+#sizeBtns > button{
+    background-color: hsl(32, 100%, 49%);
+    color: #fff;
+}
+
+#sizeBtns button:focus {
+    background-color: hsl(22, 100%, 30%);
+}
+
+#speedBtns button:focus{
+    background-color: rgb(146, 0, 0);
+}
+
+.search-algorithms {
+    margin: 10px 0px 20px 0px;
+}
+/* 
+.search-algorithms button {
+    width: 100%;
+} */
+
+.opt-obstacles{
+    margin: 0px auto;
+    text-align: left;
+    padding: 5px 20px;
+}
+
+#walls{
+    width: 100%;
+}
+
+#rangeObstacles {
+    width: 100%;
+}
+
+.search-algorithms button{
+    margin: 5px;
+}
+
+.search-algorithms button:focus {
+    transform: scale(1.1);
+}
+
+.labyrinth {
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    text-align: center;
+}
+
+.labyrinth div {
+    aspect-ratio: 1;
+    color: rgba(255, 255, 255, 0.664);
+    margin: 0px;
+    padding: 0px;
+    font-size: 70%;
+    border: 1px rgba(0, 0, 0, 0.219) solid;
+    position: relative;
+}
+
+.labyrinth div p {
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Notification */
+.toast {
+    position: fixed;
+    
+}
