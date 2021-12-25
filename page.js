@@ -34,6 +34,8 @@ function RenderMaze(maze) {
             mazeGUI.appendChild(cell);
         }
     }
+    document.querySelector("#cell-1-1").style.setProperty("background-color", "#A6F3A6");
+    document.querySelector(`#cell-${dim-2}-${dim-2}`).style.setProperty("background-color", "#F3A6A6");
     mazeGUI.style.setProperty('--grid-rows', dim);
     mazeGUI.style.setProperty('--grid-cols', dim);
     cellEnumeration();
