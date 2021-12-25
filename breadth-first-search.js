@@ -8,7 +8,7 @@ class BFS {
         this.visited = [];
         this.queue = new Queue();
         let result = this.solve(1, 1);
-        console.log("BFS Solvable: ",result);
+        console.log("BFS Solvable: ", result);
         let path = this.queue.peek();
         return [this.visited, path, result];
     }

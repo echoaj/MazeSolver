@@ -37,7 +37,7 @@ function generateMessage(delay, title, msg, color) {
     const message = document.querySelector('.notification__message');
     message.querySelector('h1').textContent = title;
     message.querySelector('p').innerHTML = msg;
-    const notification = document.querySelector('.message--success')
+    const notification = document.querySelector('.message--success');
     notification.style.setProperty("border-left-color", color);
     // call the function to show the message
     showMessage();
