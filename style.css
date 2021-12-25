@@ -37,10 +37,6 @@ body {
     width: 50%;
 }
 
-.opt-size{
-    background-color: rgb(246, 214, 255);
-}
-
 button {
     box-shadow: none !important;
 }
@@ -99,7 +95,8 @@ button {
     aspect-ratio: 1;
     margin: 0px;
     padding: 0px;
-    border: 1px rgba(0, 0, 0, 0.219) solid;
+    border-bottom: 1px rgba(0, 0, 0, 0.120) solid;
+    border-right: 1px rgba(0, 0, 0, 0.120) solid;
     position: relative;
 }
 
@@ -128,6 +125,14 @@ button {
 
     #sizeBtns #speedBtns{
         width: 100%;
+    }
+
+    #sizeBtns button:focus {
+        background-color: hsl(22, 100%, 30%);
+    }
+    
+    #speedBtns button:focus{
+        background-color: rgb(146, 0, 0);
     }
 }
 
