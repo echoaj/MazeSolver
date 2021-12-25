@@ -16,6 +16,7 @@ function dismissMessage() {
 
 // function showing the message
 function showMessage() {
+  const dismissAfter = 8000;
   // add a class of .received to the .notification container
   notification.classList.add('received');
 
@@ -25,7 +26,7 @@ function showMessage() {
   button.addEventListener('click', dismissMessage, { once: true });
   setTimeout(function () {
     dismissMessage();
-  }, 8000);
+  }, dismissAfter);
 }
 
 // function generating a message with a random title and text

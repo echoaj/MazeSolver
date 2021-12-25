@@ -24,9 +24,9 @@ body {
 }
 
 .app-container {
-    min-width: 500px;
+    min-width: 320px;
     max-width: 800px;
-    /* background-color: rgb(178, 209, 245); */
+    /* background-color: rgb(223, 223, 213); */
     margin: auto;
     text-align: center;
     padding: 0px;

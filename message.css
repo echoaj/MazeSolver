@@ -25,6 +25,7 @@ body {
   /* padding to avoid cropping the box-shadow on the message */
   padding: 0.25rem;
   z-index: 1;
+  pointer-events: none;
 }
 
 
@@ -78,13 +79,18 @@ body {
   font-size: 1.1rem;
   font-weight: 500;
   text-transform: capitalize;
+  margin-bottom: 4px;
+  margin-top: 5px;
 }
+
 .notification__message p {
   max-width: 320px;
   min-width: 250px;
   font-size: 1.0rem;
   grid-column: 1/-1;
+  margin-bottom: 10px;
 }
+
 .notification__message button {
   background: none;
   border: none;
@@ -94,7 +100,9 @@ body {
   grid-column: 2/3;
   grid-row: 1/2;
   align-self: center;
+  pointer-events: painted;
 }
+
 .notification__message button svg {
   display: block;
   width: 100%;
