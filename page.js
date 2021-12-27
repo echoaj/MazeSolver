@@ -1,4 +1,3 @@
-
 Array.prototype.has = function (list) {
     for (let i = 0; i < this.length; i++) {
         if (this[i][0] === list[0] && this[i][1] === list[1]) {
@@ -35,7 +34,7 @@ function RenderMaze(maze) {
         }
     }
     document.querySelector("#cell-1-1").style.setProperty("background-color", "#A6F3A6");
-    document.querySelector(`#cell-${dim-2}-${dim-2}`).style.setProperty("background-color", "#F3A6A6");
+    document.querySelector(`#cell-${dim - 2}-${dim - 2}`).style.setProperty("background-color", "#F3A6A6");
     mazeGUI.style.setProperty('--grid-rows', dim);
     mazeGUI.style.setProperty('--grid-cols', dim);
     cellEnumeration();
@@ -186,5 +185,17 @@ $(document).ready(function () {
             mazeState["enumerated"] = false;
             cellEnumeration();
         }
+    });
+
+    $(".instructions").click(function () {
+        let manuel = "1) Choose a size dimension for your maze.\n";
+        manuel += "2) Choose a speed for the path to be drawn.\n";
+        manuel += "3) Choose the number of obstacles for you maze.\n";
+        manuel += "4) If you would like to number each cell of the maze select the enumerate check box\n";
+        manuel += "5) Choose an algorithm to solve the maze\n";
+        manuel += "     -Depth-first-search returns a path\n";
+        manuel += "     -Breadth-first-search returns the shortest path\n";
+        manuel += "     -The maze is unsolvable if there are too many obstacles.\n"
+        alert(manuel);
     });
 });
