@@ -9,10 +9,8 @@ body {
     font-family: 'Saira', sans-serif;
 }
 
-.instructions {
-    text-decoration: underline;
-    color: blue;
-    cursor: pointer;
+#instructions {
+    
 }
 
 .btnDash {

@@ -187,7 +187,7 @@ $(document).ready(function () {
         }
     });
 
-    $(".instructions").click(function () {
+    $("#instructions").click(function () {
         let manuel = "1) Choose a size dimension for your maze.\n";
         manuel += "2) Choose a speed for the path to be drawn.\n";
         manuel += "3) Choose the number of obstacles for you maze.\n";
