@@ -186,16 +186,4 @@ $(document).ready(function () {
             cellEnumeration();
         }
     });
-
-    $("#instructions").click(function () {
-        let manuel = "1) Choose a size dimension for your maze.\n";
-        manuel += "2) Choose a speed for the path to be drawn.\n";
-        manuel += "3) Choose the number of obstacles for you maze.\n";
-        manuel += "4) If you would like to number each cell of the maze select the enumerate check box\n";
-        manuel += "5) Choose an algorithm to solve the maze\n";
-        manuel += "     -Depth-first-search returns a path\n";
-        manuel += "     -Breadth-first-search returns the shortest path\n";
-        manuel += "     -The maze is unsolvable if there are too many obstacles.\n"
-        alert(manuel);
-    });
 });

@@ -7,19 +7,35 @@ body {
     /* background-color: gray; */
     font-family: 'Orbitron', sans-serif;
     font-family: 'Saira', sans-serif;
+    padding-top: 1rem;
+}
+
+#instructions-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
 
 #instructions {
-    
+    text-align: left;
+}
+
+#instructions ol{
+    margin-left: 1rem;
+}
+
+#instructions-tabbed {
+    margin-left: 2rem;
 }
 
 .btnDash {
-    padding: 10px 0px;
+    padding: 10px auto;
 }
 
 .sizeDash, .speedDash {
     display: inline-block;
     text-align: left;
+    margin: 5px 0px;
 }
 
 .sizeDash label, .speedDash label {
@@ -128,6 +144,10 @@ button {
 
     #sizeBtns #speedBtns{
         width: 100%;
+    }
+
+    #instructions li, p {
+        font-size: 14px;
     }
 }
 
