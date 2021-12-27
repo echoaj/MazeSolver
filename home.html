@@ -80,16 +80,41 @@
         <script src="message.js"></script>
     </div>
 
-    <style>
-        
-    </style>
 
     <div class="app-container">
-        
-        
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>1) pick a size</h5>
+                        <h5>2) pick a speed</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="dashboard">
 
-            
+            <button class="btn btn-dark" id="instructions">Instructions</button>
+
             <div class="btnDash">
                 <div class="sizeDash">
                     <label>Size</label>
@@ -100,7 +125,7 @@
                         <button type="button" value=25 class="btn">25</button>
                     </div>
                 </div>
-                
+
                 <div class="speedDash">
                     <label>Speed</label>
                     <div class="btn-group mr-2" id="speedBtns" role="group" aria-label="First group">
@@ -111,7 +136,6 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-dark" id="instructions">Instructions</button>
 
             <div class="opt-obstacles">
                 <div class="rangeDashboard">
