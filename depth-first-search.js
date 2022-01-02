@@ -3,7 +3,7 @@ class DFS {
     #end;
 
     constructor(maze) {
-        // this.deep_copy = JSON.parse(JSON.stringify(maze))
+        this.deep_copy = JSON.parse(JSON.stringify(maze))
         this.maze = maze;
         this.#end = maze.length - 2;
         this.path = [];
