@@ -151,6 +151,7 @@ function sliderHandler() {
     RenderMaze(maze);
 };
 
+// window.location.reload(true);
 let dimention = 10; // default
 let obstacles = 25; // default
 let speed = 75;     // default
