@@ -3,8 +3,8 @@ class DFS {
     #end;
 
     constructor(maze) {
-        this.deep_copy = JSON.parse(JSON.stringify(maze))
-        this.maze = this.deep_copy;
+        // this.deep_copy = JSON.parse(JSON.stringify(maze))
+        this.maze = maze;
         this.#end = maze.length - 2;
         this.path = [];
         this.visited = [];
@@ -14,7 +14,7 @@ class DFS {
     }
 
     solve(a, b) {
-        this.maze[a][b] = 2;
+        // this.maze[a][b] = 2;
         this.path.push([a, b]);
         if (a === this.#end && b === this.#end) {
             return true;
