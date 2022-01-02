@@ -118,21 +118,6 @@ button {
     }
 }
 
-@supports not (display: grid){
-    #line1:after{
-        content: "!!!This browser does not fully support grid!!!";
-        background-color: yellow;
-    }
-    #line2:after{
-        content: "!!!Support for grid can be enabled in your device settings!!!";
-        background-color: yellow;
-    }
-    #line3:after{
-        content: "!!!Contact the developer for assistance!!!";
-        background-color: yellow;
-    }
-}
-
 .labyrinth div {
     /* aspect-ratio: 1;  */ /*Does not always work on all phones.  Experimental*/
     margin: 0px;
