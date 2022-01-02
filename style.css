@@ -110,6 +110,9 @@ button {
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     /* grid-template-rows: repeat(var(--grid-rows), 1fr); */
     text-align: center;
+
+    display: -webkit-grid;
+    -webkit-grid-columns: repeat(var(--grid-cols), 1fr);
 }
 
 @media only screen and (max-width: 800px) {
