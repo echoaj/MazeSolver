@@ -1,6 +1,7 @@
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
+    --app-container-width: 800px;
 }
 
 body {
@@ -45,7 +46,7 @@ body {
 
 .app-container {
     min-width: 320px;
-    max-width: 800px;
+    max-width: var(--app-container-width);
     /* background-color: rgb(223, 223, 213); */
     margin: auto;
     text-align: center;
@@ -105,7 +106,7 @@ button {
 }
 
 .labyrinth {
-    height: 800px;
+    height: var(--app-container-width);
     display: grid;
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     /* grid-template-rows: repeat(var(--grid-rows), 1fr); */
