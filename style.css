@@ -121,6 +121,12 @@ button {
     }
 }
 
+@supports (display: grid){
+    #last{
+        background-color: red;
+    }
+}
+
 .labyrinth div {
     /* aspect-ratio: 1;  */ /*Does not always work on all phones.  Experimental*/
     margin: 0px;
