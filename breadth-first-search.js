@@ -3,7 +3,8 @@ class BFS {
 
     #end;
     constructor(maze) {
-        this.maze = maze;
+        this.deep_copy = JSON.parse(JSON.stringify(maze))
+        this.maze = this.deep_copy;
         this.#end = maze.length - 2;
         this.visited = [];
         this.queue = new Queue();

@@ -98,6 +98,7 @@ function RenderBFSPath() {
     console.log("BOTH: ", vist_path_solv);
     let visitedIterable = vist_path_solv[0];
     let pathIterable = vist_path_solv[1];
+    console.log(pathIterable);
     let solvable = vist_path_solv[2];
     let visitedIterator = visitedIterable[Symbol.iterator]();
     let pathIterator = pathIterable[Symbol.iterator]();
