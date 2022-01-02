@@ -11,6 +11,7 @@ Array.prototype.has = function (list) {
 function RenderMaze(maze) {
     mazeState["displayed"] = true;
     mazeState["solved"] = false;
+    mazeState["solving_in_progress"] = false;
     // Clear GUI
     while (mazeGUI.firstChild) {
         mazeGUI.removeChild(mazeGUI.firstChild);
@@ -52,6 +53,7 @@ function cellEnumeration() {
 
 // function that colors square for the path
 function nextCell(iter, color) {
+
     let obj = iter.next();
     if (obj.done) {
         return obj.done;
@@ -78,13 +80,20 @@ function RenderDFSPath() {
     let pathIterator = pathIterable[Symbol.iterator]();
     let solveSpeed = mazeState["speed"];
     let msg = solvable ? `Maze solvable in <b>${pathIterable.length} steps</b>.` : 'Maze not solvable.';
+
+    mazeState["solving_in_progress"] = true;
     // Start Path Animation
     const setInt = setInterval(function () {
-        let done = nextCell(pathIterator, colorCode[2]);
-        if (done) {
+        // Makes it so if you generate a new maze while solving it stops solving.
+        if(mazeState["solving_in_progress"] == false){
             clearInterval(setInt);
-            generateMessage(500, "DFS", msg, colorCode[2]);
-            mazeState["solved"] = true;
+        }else{
+            let done = nextCell(pathIterator, colorCode[2]);
+            if (done) {
+                clearInterval(setInt);
+                generateMessage(500, "DFS", msg, colorCode[2]);
+                mazeState["solved"] = true;
+            }
         }
     }, solveSpeed);
 }
@@ -104,20 +113,30 @@ function RenderBFSPath() {
     let pathIterator = pathIterable[Symbol.iterator]();
     let solveSpeed = mazeState["speed"];
     let msg = solvable ? `Maze's shortest path solvable in <b>${pathIterable.length} steps</b>.` : 'Maze not solvable.';
+    
+    mazeState["solving_in_progress"] = true;
     // Start Path Animation for spread
     const setInt2 = setInterval(function () {
-        let done = nextCell(visitedIterator, colorCode[3]);
-        if (done) {
-            // Start Path for shortest
+        if(mazeState["solving_in_progress"] == false){
             clearInterval(setInt2);
-            const setInt = setInterval(function () {
-                let done = nextCell(pathIterator, colorCode[4]);
-                if (done) {
-                    clearInterval(setInt);
-                    generateMessage(500, "BFS", msg, colorCode[3]);
-                    mazeState["solved"] = true;
-                }
-            }, solveSpeed);
+        }else{
+            let done = nextCell(visitedIterator, colorCode[3]);
+            if (done) {
+                // Start Path for shortest
+                clearInterval(setInt2);
+                const setInt = setInterval(function () {
+                    if(mazeState["solving_in_progress"] == false){
+                            clearInterval(setInt);
+                        }else{
+                        let done = nextCell(pathIterator, colorCode[4]);
+                        if (done) {
+                            clearInterval(setInt);
+                            generateMessage(500, "BFS", msg, colorCode[3]);
+                            mazeState["solved"] = true;
+                        }
+                    }
+                }, solveSpeed);
+            }
         }
     }, solveSpeed / 2);
 }
@@ -168,7 +187,7 @@ const bfsButton = document.querySelector("#bfs");
 const colorCode = ["white", "black", "#007bff", "#28a745", "#dc3545"];
 const mazeState = {
     "displayed": false, "solved": false, "enumerated": false,
-    "speed": speed
+    "speed": speed, "solving_in_progress": false
 };
 
 slider.oninput = sliderHandler;
